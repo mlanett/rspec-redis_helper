@@ -14,4 +14,9 @@ Gem::Specification.new do |gem|
   gem.name          = "rspec-redis_helper"
   gem.require_paths = ["lib"]
   gem.version       = RSpec::RedisHelper::VERSION
+
+  gem.add_dependency "redis"
+
+  gem.add_development_dependency "rake"
+  gem.add_development_dependency "rspec"
 end
