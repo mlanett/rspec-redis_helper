@@ -36,7 +36,7 @@ Configure RSpec in your support or helper file like so:
     end
 
 You will also need to configure your app to use one of these redis connections,
-or to be initialized from RSpec::RedisHelper::TEST.
+or to be initialized from RSpec::RedisHelper::CONFIG.
 
 Then mark your Redis-using specs with redis: true, like so:
 

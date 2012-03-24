@@ -3,14 +3,15 @@ require "rspec-redis_helper/version"
 module RSpec
   module RedisHelper
 
-    TEST = { url: "redis://127.0.0.1:6379/1" }
+    CONFIG = { url: "redis://127.0.0.1:6379/1" }
+    TEST = CONFIG # deprecated
 
     def redis
-      @redis ||= ::Redis.connect(TEST)
+      @redis ||= ::Redis.connect(CONFIG)
     end
 
     def redis2
-      @redis2 ||= ::Redis.connect(TEST)
+      @redis2 ||= ::Redis.connect(CONFIG)
     end
 
     def with_watch( redis, *args )
